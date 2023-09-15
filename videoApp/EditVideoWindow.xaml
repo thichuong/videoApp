@@ -1,0 +1,28 @@
+﻿<Window x:Class="videoApp.EditVideoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:videoApp"
+        mc:Ignorable="d"
+        Title="YOUTUBE SHORTIFY 2.0" Height="450" Width="995">
+    <Grid>
+        <!-- Thêm MediaElement để hiển thị video -->
+        <MediaElement x:Name="mediaPlayer" HorizontalAlignment="Right" VerticalAlignment="Top" Height="400" Width="600" Margin="0,10,0,0" />
+        
+        <!-- Thêm giao diện cho việc import video -->
+        <Button Content="Import Video" Click="btnImportVideo_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" />
+
+        <!-- Thêm giao diện cho việc chọn folder hình ảnh -->
+        <Button Content="Chọn Folder Hình Ảnh" Click="btnSelectImageFolder_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,70,0,0" />
+        <TextBlock Text="Đường dẫn Folder Hình Ảnh:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,30,0,0" />
+        <TextBox x:Name="txtImageFolderPath" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,30,0,0" Width="400" />
+
+        <!-- Thêm giao diện cho việc chọn folder âm thanh -->
+        <Button Content="Chọn Folder Âm Thanh" Click="btnSelectAudioFolder_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,140,0,0" />
+        <TextBlock Text="Đường dẫn Folder Âm Thanh:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,100,0,0" />
+        <TextBox x:Name="txtAudioFolderPath" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="160,100,0,0" Width="400" />
+        <!-- Thêm nút chạy để xử lý video -->
+        <Button Content="Export" Click="btnExportVideo_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" />
+    </Grid>
+</Window>
